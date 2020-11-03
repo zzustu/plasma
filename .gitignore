@@ -1,0 +1,7 @@
+# MacOS
+.DS_Store
+# Apache Maven
+target/
+# JetBrains IDEA
+*.iml
+.idea/
