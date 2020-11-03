@@ -2,6 +2,7 @@
 .DS_Store
 # Apache Maven
 target/
+.flattened-pom.xml
 # JetBrains IDEA
 *.iml
 .idea/

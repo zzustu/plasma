@@ -19,7 +19,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
          https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.deepinthink.buildstack</groupId>
+  <parent>
+    <groupId>org.deepinthink.buildstack</groupId>
+    <artifactId>buildstack-maven-dependencies-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <relativePath/>
+  </parent>
   <artifactId>buildstack-maven-template-dependencies</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
@@ -63,4 +68,40 @@
       <url>https://github.com/deepinthink-buildstack/buildstack-maven-template/graphs/contributors</url>
     </developer>
   </developers>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>flatten-maven-plugin</artifactId>
+        <inherited>true</inherited>
+        <executions>
+          <execution>
+            <id>flatten</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>flatten</goal>
+            </goals>
+            <configuration>
+              <updatePomFile>true</updatePomFile>
+              <flattenMode>bom</flattenMode>
+              <pomElements>
+                <parent>expand</parent>
+                <pluginManagement>keep</pluginManagement>
+                <properties>keep</properties>
+                <repositories>remove</repositories>
+                <profiles>keep</profiles>
+              </pomElements>
+            </configuration>
+          </execution>
+          <execution>
+            <id>flatten-clean</id>
+            <phase>clean</phase>
+            <goals>
+              <goal>clean</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 </project>
