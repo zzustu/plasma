@@ -1,3 +1,7 @@
-= buildstack-maven-template image:https://github.com/deepinthink-buildstack/buildstack-maven-template/workflows/Java%20CI%20-%20master/badge.svg[Java CI - master, link=https://github.com/deepinthink-buildstack/buildstack-maven-template]
+= buildstack-maven-template
+
+image:https://img.shields.io/badge/License-Apache%202.0-blue.svg[License, link=LICENSE.txt]
+image:https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg[Contributor Covenant, link=CODE_OF_CONDUCT.adoc]
+image:https://github.com/deepinthink-buildstack/buildstack-maven-template/workflows/Java%20CI%20-%20master/badge.svg[Java CI - master, link=https://github.com/deepinthink-buildstack/buildstack-maven-template]
 
 Apache Maven template project.
