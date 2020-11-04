@@ -77,19 +77,21 @@
     </developer>
   </developers>
   <properties>
-    <java.version>1.8</java.version>
-    <file.encoding>UTF-8</file.encoding>
-    <project.build.sourceEncoding>${file.encoding}</project.build.sourceEncoding>
-    <project.report.outputEncoding>${file.encoding}</project.report.outputEncoding>
-    <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-    <maven.compiler.source>${java.version}</maven.compiler.source>
-    <maven.compiler.target>${java.version}</maven.compiler.target>
+    <spring-boot.version>2.2.10.RELEASE</spring-boot.version>
   </properties>
   <modules>
     <module>buildstack-maven-template-dependencies</module>
+    <module>buildstack-maven-template-sample</module>
   </modules>
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>${spring-boot.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
       <dependency>
         <groupId>org.deepinthink.buildstack</groupId>
         <artifactId>buildstack-maven-template-dependencies</artifactId>
@@ -100,19 +102,11 @@
     </dependencies>
   </dependencyManagement>
   <build>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>${maven-compiler-plugin.version}</version>
-          <configuration>
-            <source>${maven.compiler.source}</source>
-            <target>${maven.compiler.target}</target>
-            <encoding>${file.encoding}</encoding>
-          </configuration>
-        </plugin>
-      </plugins>
-    </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+      </plugin>
+    </plugins>
   </build>
 </project>
