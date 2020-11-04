@@ -1,0 +1,19 @@
+= BuildStack Maven Parent Guide =
+:toc: left
+:toclevels: 3
+:doctype: book
+:sectanchors:
+:sectlinks:
+:sectnums:
+:icons: font
+:hide-uri-scheme:
+:last-update-label!:
+:tabsize: 2
+
+== Overview ==
+
+Sample Overview.
+
+include::doc1.adoc[]
+
+include::doc2.adoc[]
