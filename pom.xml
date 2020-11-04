@@ -81,6 +81,7 @@
   </properties>
   <modules>
     <module>buildstack-maven-template-dependencies</module>
+    <module>buildstack-maven-template-docs</module>
     <module>buildstack-maven-template-sample</module>
   </modules>
   <dependencyManagement>
