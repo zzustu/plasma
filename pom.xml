@@ -79,10 +79,13 @@
   </developers>
   <properties>
     <spring-boot.version>2.2.10.RELEASE</spring-boot.version>
+    <plasma-broker.version>0.0.1-SNAPSHOT</plasma-broker.version>
   </properties>
   <modules>
+    <module>jcloud-broker-server</module>
     <module>jcloud-dependencies</module>
     <module>jcloud-docs</module>
+    <module>jcloud-routing-server</module>
     <module>jcloud-sample</module>
   </modules>
   <dependencyManagement>
@@ -91,6 +94,13 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
         <version>${spring-boot.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.deepinthink.plasma</groupId>
+        <artifactId>plasma-broker-dependencies</artifactId>
+        <version>${plasma-broker.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>

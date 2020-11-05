@@ -28,9 +28,13 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    - name: Install buildstack-maven-parent
+    - name: Install [deepinthink-buildstack/buildstack-maven-parent]
       run: |
         git clone https://github.com/deepinthink-buildstack/buildstack-maven-parent
         cd buildstack-maven-parent && ./mvnw "-Dmaven.repo.local=../.m2" -U -B install
+    - name: Install [deepinthink-plasma/plasma-broker]
+      run: |
+        git clone https://github.com/deepinthink-plasma/plasma-broker
+        cd plasma-broker && ./mvnw "-Dmaven.repo.local=../.m2" -U -B install
     - name: Build with Maven Wrapper
       run: ./mvnw "-Dmaven.repo.local=.m2" -U -B package
