@@ -20,18 +20,20 @@
          https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.deepinthink.buildstack</groupId>
-    <artifactId>buildstack-maven-template</artifactId>
+    <groupId>org.deepinthink.jcloud</groupId>
+    <artifactId>jcloud</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>buildstack-maven-template-sample</artifactId>
+  <artifactId>jcloud-docs</artifactId>
   <packaging>jar</packaging>
-  <name>BuildStack Maven Template Sample</name>
-  <description>BuildStack Maven Template Sample</description>
-  <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter</artifactId>
-    </dependency>
-  </dependencies>
+  <name>JCloud Docs</name>
+  <description>JCloud Docs</description>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.asciidoctor</groupId>
+        <artifactId>asciidoctor-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
 </project>

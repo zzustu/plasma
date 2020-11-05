@@ -1,10 +1,10 @@
-= buildstack-maven-template
+= jcloud
 
 image:https://img.shields.io/badge/License-Apache%202.0-blue.svg[License, link=LICENSE.txt]
 image:https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg[Contributor Covenant, link=CODE_OF_CONDUCT.adoc]
-image:https://github.com/deepinthink-buildstack/buildstack-maven-template/workflows/Java%20CI%20-%20master/badge.svg[Java CI - master, link=https://github.com/deepinthink-buildstack/buildstack-maven-template]
+image:https://github.com/deepinthink/jcloud/workflows/Java%20CI%20-%20master/badge.svg[Java CI - master, link=https://github.com/deepinthink/jcloud]
 
-Apache Maven template project.
+Community-Driver Instant-Messaging cloud service based on link:https://github.com/deepinthink-plasma[@deepinthink-plasma] .
 
 == Contributing
 

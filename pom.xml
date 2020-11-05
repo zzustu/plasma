@@ -25,16 +25,17 @@
     <version>0.0.1-SNAPSHOT</version>
     <relativePath/>
   </parent>
-  <artifactId>buildstack-maven-template</artifactId>
+  <groupId>org.deepinthink.jcloud</groupId>
+  <artifactId>jcloud</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>BuildStack Maven Template</name>
-  <description>BuildStack Maven Template</description>
-  <url>https://github.com/deepinthink-buildstack/buildstack-maven-template</url>
+  <name>JCloud</name>
+  <description>JCloud</description>
+  <url>https://github.com/deepinthink/jcloud</url>
   <inceptionYear>2020</inceptionYear>
   <organization>
-    <name>DeepInThink BuildStack</name>
-    <url>https://github.com/deepinthink-buildstack</url>
+    <name>DeepInThink</name>
+    <url>https://github.com/deepinthink</url>
   </organization>
   <licenses>
     <license>
@@ -59,7 +60,7 @@
   </licenses>
   <issueManagement>
     <system>GitHub Issues</system>
-    <url>https://github.com/deepinthink-buildstack/buildstack-maven-template/issues</url>
+    <url>https://github.com/deepinthink/jcloud/issues</url>
   </issueManagement>
   <developers>
     <developer>
@@ -80,9 +81,9 @@
     <spring-boot.version>2.2.10.RELEASE</spring-boot.version>
   </properties>
   <modules>
-    <module>buildstack-maven-template-dependencies</module>
-    <module>buildstack-maven-template-docs</module>
-    <module>buildstack-maven-template-sample</module>
+    <module>jcloud-dependencies</module>
+    <module>jcloud-docs</module>
+    <module>jcloud-sample</module>
   </modules>
   <dependencyManagement>
     <dependencies>
@@ -94,8 +95,8 @@
         <scope>import</scope>
       </dependency>
       <dependency>
-        <groupId>org.deepinthink.buildstack</groupId>
-        <artifactId>buildstack-maven-template-dependencies</artifactId>
+        <groupId>org.deepinthink.jcloud</groupId>
+        <artifactId>jcloud-dependencies</artifactId>
         <version>${project.version}</version>
         <type>pom</type>
         <scope>import</scope>
