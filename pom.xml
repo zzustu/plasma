@@ -86,7 +86,6 @@
     <module>jcloud-dependencies</module>
     <module>jcloud-docs</module>
     <module>jcloud-routing-server</module>
-    <module>jcloud-sample</module>
   </modules>
   <dependencyManagement>
     <dependencies>
