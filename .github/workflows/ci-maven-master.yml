@@ -36,5 +36,9 @@ jobs:
       run: |
         git clone https://github.com/deepinthink-plasma/plasma-broker
         cd plasma-broker && ./mvnw "-Dmaven.repo.local=../.m2" -U -B install
+    - name: Install [deepinthink/jconfig]
+      run: |
+        git clone https://github.com/deepinthink/jconfig
+        cd jconfig && ./mvnw "-Dmaven.repo.local=../.m2" -U -B install
     - name: Build with Maven Wrapper
       run: ./mvnw "-Dmaven.repo.local=.m2" -U -B package

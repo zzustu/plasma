@@ -81,6 +81,7 @@
     <spring-boot.version>2.2.10.RELEASE</spring-boot.version>
     <plasma.version>0.0.1-SNAPSHOT</plasma.version>
     <plasma-broker.version>${plasma.version}</plasma-broker.version>
+    <jconfig.version>0.0.1-SNAPSHOT</jconfig.version>
   </properties>
   <modules>
     <module>jcloud-broker-server</module>
@@ -101,6 +102,13 @@
         <groupId>org.deepinthink.plasma</groupId>
         <artifactId>plasma-broker-dependencies</artifactId>
         <version>${plasma-broker.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.deepinthink.jconfig</groupId>
+        <artifactId>jconfig-dependencies</artifactId>
+        <version>${jconfig.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>

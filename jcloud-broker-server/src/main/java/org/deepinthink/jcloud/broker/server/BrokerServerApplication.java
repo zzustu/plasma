@@ -16,11 +16,13 @@
 
 package org.deepinthink.jcloud.broker.server;
 
+import org.deepinthink.jconfig.client.EnableJConfigClient;
 import org.deepinthink.plasma.broker.server.EnableBrokerServer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @EnableBrokerServer
+@EnableJConfigClient
 @SpringBootApplication
 public class BrokerServerApplication {
   public static void main(String[] args) {

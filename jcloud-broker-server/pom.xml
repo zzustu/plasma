@@ -37,5 +37,9 @@
       <groupId>org.deepinthink.plasma</groupId>
       <artifactId>plasma-broker-starter-server</artifactId>
     </dependency>
+    <dependency>
+      <groupId>org.deepinthink.jconfig</groupId>
+      <artifactId>jconfig-starter-client</artifactId>
+    </dependency>
   </dependencies>
 </project>

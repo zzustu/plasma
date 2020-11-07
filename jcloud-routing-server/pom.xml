@@ -37,5 +37,9 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter</artifactId>
     </dependency>
+    <dependency>
+      <groupId>org.deepinthink.jconfig</groupId>
+      <artifactId>jconfig-starter-client</artifactId>
+    </dependency>
   </dependencies>
 </project>
