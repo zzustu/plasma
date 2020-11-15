@@ -85,6 +85,7 @@
     <module>plasma-broker-server</module>
     <module>plasma-dependencies</module>
     <module>plasma-docs</module>
+    <module>plasma-routing-server</module>
   </modules>
   <dependencyManagement>
     <dependencies>
