@@ -20,26 +20,20 @@
          https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.deepinthink.jcloud</groupId>
-    <artifactId>jcloud</artifactId>
+    <groupId>org.deepinthink.plasma</groupId>
+    <artifactId>plasma</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>jcloud-routing-server</artifactId>
+  <artifactId>plasma-docs</artifactId>
   <packaging>jar</packaging>
-  <name>JCloud Routing Server</name>
-  <description>JCloud Routing Server</description>
-  <dependencies>
-    <dependency>
-      <groupId>org.deepinthink.plasma</groupId>
-      <artifactId>plasma-broker-starter-client</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.deepinthink.jconfig</groupId>
-      <artifactId>jconfig-starter-client</artifactId>
-    </dependency>
-  </dependencies>
+  <name>Plasma Docs</name>
+  <description>Plasma Docs</description>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.asciidoctor</groupId>
+        <artifactId>asciidoctor-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
 </project>

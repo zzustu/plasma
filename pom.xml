@@ -25,13 +25,13 @@
     <version>0.0.1-SNAPSHOT</version>
     <relativePath/>
   </parent>
-  <groupId>org.deepinthink.jcloud</groupId>
-  <artifactId>jcloud</artifactId>
+  <groupId>org.deepinthink.plasma</groupId>
+  <artifactId>plasma</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>JCloud</name>
-  <description>JCloud</description>
-  <url>https://github.com/deepinthink/jcloud</url>
+  <name>Plasma</name>
+  <description>Plasma</description>
+  <url>https://github.com/deepinthink/plasma</url>
   <inceptionYear>2020</inceptionYear>
   <organization>
     <name>DeepInThink</name>
@@ -60,7 +60,7 @@
   </licenses>
   <issueManagement>
     <system>GitHub Issues</system>
-    <url>https://github.com/deepinthink/jcloud/issues</url>
+    <url>https://github.com/deepinthink/plasma/issues</url>
   </issueManagement>
   <developers>
     <developer>
@@ -79,15 +79,10 @@
   </developers>
   <properties>
     <spring-boot.version>2.2.10.RELEASE</spring-boot.version>
-    <plasma.version>0.0.1-SNAPSHOT</plasma.version>
-    <plasma-broker.version>${plasma.version}</plasma-broker.version>
-    <jconfig.version>0.0.1-SNAPSHOT</jconfig.version>
   </properties>
   <modules>
-    <module>jcloud-broker-server</module>
-    <module>jcloud-dependencies</module>
-    <module>jcloud-docs</module>
-    <module>jcloud-routing-server</module>
+    <module>plasma-dependencies</module>
+    <module>plasma-docs</module>
   </modules>
   <dependencyManagement>
     <dependencies>
@@ -100,21 +95,7 @@
       </dependency>
       <dependency>
         <groupId>org.deepinthink.plasma</groupId>
-        <artifactId>plasma-broker-dependencies</artifactId>
-        <version>${plasma-broker.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.deepinthink.jconfig</groupId>
-        <artifactId>jconfig-dependencies</artifactId>
-        <version>${jconfig.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.deepinthink.jcloud</groupId>
-        <artifactId>jcloud-dependencies</artifactId>
+        <artifactId>plasma-dependencies</artifactId>
         <version>${project.version}</version>
         <type>pom</type>
         <scope>import</scope>
