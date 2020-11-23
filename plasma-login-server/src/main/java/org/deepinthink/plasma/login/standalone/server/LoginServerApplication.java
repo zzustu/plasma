@@ -14,8 +14,9 @@
  * limitations under the License.
  */
 
-package org.deepinthink.plasma.login.server;
+package org.deepinthink.plasma.login.standalone.server;
 
+import org.deepinthink.plasma.login.server.EnableLoginServer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

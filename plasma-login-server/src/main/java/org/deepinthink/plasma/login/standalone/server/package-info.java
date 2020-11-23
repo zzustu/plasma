@@ -14,15 +14,4 @@
  * limitations under the License.
  */
 
-package org.deepinthink.plasma.broker.server;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-@EnableBrokerServer
-@SpringBootApplication
-public class BrokerServerApplication {
-  public static void main(String[] args) {
-    SpringApplication.run(BrokerServerApplication.class, args);
-  }
-}
+package org.deepinthink.plasma.login.standalone.server;

@@ -14,4 +14,4 @@
  * limitations under the License.
  */
 
-package org.deepinthink.plasma.broker.server;
+package org.deepinthink.plasma.broker.standalone.server;
