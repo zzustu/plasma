@@ -35,17 +35,41 @@ jobs:
         path: deepinthink-buildstack/buildstack-maven-parent
     - name: Install [deepinthink-buildstack/buildstack-maven-parent]
       run: |
-        cd deepinthink-buildstack/buildstack-maven-parent && ./mvnw "-Dmaven.repo.local=../../.m2" -U -B install
+        cd deepinthink-buildstack/buildstack-maven-parent
+        ./mvnw "-Dmaven.repo.local=../../.m2" -U -B install
+
+    - name: Checkout [deepinthink-plasma/plasma-proto]
+      uses: actions/checkout@v2
+      with:
+        repository: deepinthink-plasma/plasma-proto
+        path: deepinthink-plasma/plasma-proto
+
+    - name: Checkout [deepinthink-plasma/plasma-common]
+      uses: actions/checkout@v2
+      with:
+        repository: deepinthink-plasma/plasma-common
+        path: deepinthink-plasma/plasma-common
+
+    - name: Create Link [deepinthink-plasma/plasma-proto]
+      run: |
+        mkdir -p deepinthink-plasma/plasma-common/deepinthink-plasma
+        cd deepinthink-plasma/plasma-common/deepinthink-plasma
+        ln -s ../../plasma-proto plasma-proto
+
+    - name: Install [deepinthink-plasma/plasma-common]
+      run: |
+        cd deepinthink-plasma/plasma-common
+        ./mvnw "-Dmaven.repo.local=../../.m2" -U -B -P ci install
 
     - name: Checkout [deepinthink-plasma/plasma-broker]
       uses: actions/checkout@v2
       with:
         repository: deepinthink-plasma/plasma-broker
         path: deepinthink-plasma/plasma-broker
-        submodules: true
     - name: Install [deepinthink-plasma/plasma-broker]
       run: |
-        cd deepinthink-plasma/plasma-broker && ./mvnw "-Dmaven.repo.local=../../.m2" -U -B install
+        cd deepinthink-plasma/plasma-broker
+        ./mvnw "-Dmaven.repo.local=../../.m2" -U -B install
 
     - name: Checkout [deepinthink-plasma/plasma-login]
       uses: actions/checkout@v2
@@ -54,7 +78,8 @@ jobs:
         path: deepinthink-plasma/plasma-login
     - name: Install [deepinthink-plasma/plasma-login]
       run: |
-        cd deepinthink-plasma/plasma-login && ./mvnw "-Dmaven.repo.local=../../.m2" -U -B install
+        cd deepinthink-plasma/plasma-login
+        ./mvnw "-Dmaven.repo.local=../../.m2" -U -B install
 
     - name: Build with Maven Wrapper
       run: ./mvnw "-Dmaven.repo.local=.m2" -U -B package
