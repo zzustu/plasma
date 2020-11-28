@@ -14,4 +14,16 @@
  * limitations under the License.
  */
 
-package org.deepinthink.plasma.routing.server;
+package org.deepinthink.plasma.routing.standalone.server;
+
+import org.deepinthink.plasma.routing.server.EnableRoutingServer;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@EnableRoutingServer
+@SpringBootApplication
+public class RoutingServerApplication {
+  public static void main(String[] args) {
+    SpringApplication.run(RoutingServerApplication.class, args);
+  }
+}

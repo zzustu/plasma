@@ -81,6 +81,7 @@
     <spring-boot.version>2.2.10.RELEASE</spring-boot.version>
     <plasma-broker.version>0.0.1-SNAPSHOT</plasma-broker.version>
     <plasma-login.version>0.0.1-SNAPSHOT</plasma-login.version>
+    <plasma-routing.version>0.0.1-SNAPSHOT</plasma-routing.version>
   </properties>
   <modules>
     <module>plasma-broker-server</module>
@@ -109,6 +110,13 @@
         <groupId>org.deepinthink.plasma</groupId>
         <artifactId>plasma-login-dependencies</artifactId>
         <version>${plasma-login.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.deepinthink.plasma</groupId>
+        <artifactId>plasma-routing-dependencies</artifactId>
+        <version>${plasma-routing.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>

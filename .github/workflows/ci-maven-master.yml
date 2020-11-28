@@ -81,5 +81,15 @@ jobs:
         cd deepinthink-plasma/plasma-login
         ./mvnw "-Dmaven.repo.local=../../.m2" -U -B install
 
+    - name: Checkout [deepinthink-plasma/plasma-routing]
+      uses: actions/checkout@v2
+      with:
+        repository: deepinthink-plasma/plasma-routing
+        path: deepinthink-plasma/plasma-routing
+    - name: Install [deepinthink-plasma/plasma-routing]
+      run: |
+        cd deepinthink-plasma/plasma-routing
+        ./mvnw "-Dmaven.repo.local=../../.m2" -U -B install
+
     - name: Build with Maven Wrapper
       run: ./mvnw "-Dmaven.repo.local=.m2" -U -B package
